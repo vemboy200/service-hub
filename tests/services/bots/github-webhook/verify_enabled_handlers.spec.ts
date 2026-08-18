@@ -81,6 +81,7 @@ describe('GithubWebhookModule', () => {
         'MergeConflictChecker',
         'MonthOfWTH',
         'PlatinumReview',
+        'TemplateEnforcer',
         'ValidateCla',
       ],
       payload: {
@@ -89,7 +90,7 @@ describe('GithubWebhookModule', () => {
     },
     {
       eventType: EventType.PULL_REQUEST_EDITED,
-      handlers: ['DocsMissing', 'DocsParenting'],
+      handlers: ['DocsMissing', 'DocsParenting', 'TemplateEnforcer'],
       payload: {
         repository: { full_name: 'home-assistant/core', owner: { login: 'home-assistant' } },
       },
@@ -109,6 +110,7 @@ describe('GithubWebhookModule', () => {
         'MergeConflictChecker',
         'PlatinumReview',
         'RequiredLabels',
+        'TemplateEnforcer',
         'ValidateCla',
       ],
       payload: {
